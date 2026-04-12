@@ -1,56 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Your Name — Designer & Developer</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your Name — Visual Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">YourName</a>
-      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-    </nav>
-    <section class="hero">
-      <h1>Hi — I'm Your Name</h1>
-      <p class="tagline">I build beautiful interfaces & fast experiences.</p>
-      <a class="cta" href="#projects">See my work</a>
-    </section>
-  </header>
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="title">Bold visuals. Clean code.</h1>
+    <p class="subtitle">I design & build expressive web experiences.</p>
+    <a class="btn" href="#projects">See projects</a>
+  </div>
+  <svg class="hero-graphic" aria-hidden="true"><!-- decorative SVG background --></svg>
+</header>
 
-  <main>
-    <section id="projects" class="projects">
-      <h2>Selected Projects</h2>
-      <div class="filters">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="web">Web</button>
-        <button data-filter="ui">UI</button>
-        <button data-filter="tools">Tools</button>
+<main>
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="cards">
+      <article class="card"><img src="assets/img1.webp" alt=""><h3>Piece 1</h3></article>
+      <article class="card"><img src="assets/img2.webp" alt=""><h3>Piece 2</h3></article>
+      <article class="card"><img src="assets/img3.webp" alt=""><h3>Piece 3</h3></article>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Featured projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Project A</h3>
+        <p>Short description — tech used.</p>
+        <a href="#">View</a>
       </div>
-      <div class="projects-grid" id="projects-grid"></div>
-    </section>
+      <!-- repeat -->
+    </div>
+  </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>HTML/CSS:</strong> Modern layouts, animations</li>
-        <li><strong>JavaScript:</strong> Vanilla, fetch, small libs</li>
-        <li><strong>Design:</strong> Figma, prototyping</li>
-      </ul>
-    </section>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <label>Name <input name="name" required></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+</main>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <a href="assets/resume.pdf" class="button" download>Download Resume</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Your Name — Built with ❤️</p>
-  </footer>
-
-  <script src="js/main.js"></script>
+<footer class="site-footer">
+  <p>© Your Name — 2026</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
