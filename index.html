@@ -1,36 +1,56 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144572056-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-144572056-1');
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Name — Designer & Developer</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#">YourName</a>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+    <section class="hero">
+      <h1>Hi — I'm Your Name</h1>
+      <p class="tagline">I build beautiful interfaces & fast experiences.</p>
+      <a class="cta" href="#projects">See my work</a>
+    </section>
+  </header>
 
-<font size="5"><b><font color="DarkGreen">rD</font>ecker.co<font color="DarkGreen">m</font></font></b><br><br>
+  <main>
+    <section id="projects" class="projects">
+      <h2>Selected Projects</h2>
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web</button>
+        <button data-filter="ui">UI</button>
+        <button data-filter="tools">Tools</button>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
 
-<a href="/adventure.html">Adventure</a>
-<br>
-Culinary
-<br>
-<a href="/houston.html">Houston</a>
-<br>
-Infographics
-<br>
-<a href="/intermedia.html">Intermedia</a>
-<br>
-Projects
-<br>
-<!--<a href="/technology.html">Technology</a>
-<br>-->
---------------
-<br>
-<a href="mailto:site@rdecker.com">[Contact]</a>
-<br>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>HTML/CSS:</strong> Modern layouts, animations</li>
+        <li><strong>JavaScript:</strong> Vanilla, fetch, small libs</li>
+        <li><strong>Design:</strong> Figma, prototyping</li>
+      </ul>
+    </section>
 
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <a href="assets/resume.pdf" class="button" download>Download Resume</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name — Built with ❤️</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
-
