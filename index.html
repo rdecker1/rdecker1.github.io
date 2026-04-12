@@ -1,130 +1,33 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GitHubn — Developer Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#1fb6a0;--maxw:1100px;
-    color-scheme: dark;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-    background:linear-gradient(180deg,#071021 0%,var(--bg) 100%);color:#e6eef3;
-    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-    line-height:1.45;font-size:16px;
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 20px}
-  header{display:flex;align-items:center;justify-content:space-between}
-  .brand{display:flex;gap:12px;align-items:center}
-  .brand .logo{width:44px;height:44px;background:var(--accent);border-radius:8px;display:inline-block}
-  nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-  .hero{display:grid;grid-template-columns:1fr;gap:18px;margin:48px 0}
-  .hero h1{font-size:2.25rem;margin:0}
-  .hero p{color:var(--muted);margin:0;max-width:52ch}
-  .cta{display:flex;gap:12px;margin-top:12px}
-  .btn{background:var(--accent);color:#072324;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-  .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .chip{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:13px;color:var(--muted)}
-  footer{border-top:1px solid rgba(255,255,255,0.03);margin-top:48px;padding-top:18px;color:var(--muted);font-size:14px}
-  @media(min-width:760px){.hero{grid-template-columns:1fr 360px;align-items:center}.hero h1{font-size:3rem}}
-</style>
-</head>
-<body>
-<a class="skip" href="#main" style="position:absolute;left:-9999px;top:auto">Skip to content</a>
-<div class="wrap">
-  <header>
-    <div class="brand">
-      <span class="logo" aria-hidden="true"></span>
-      <div>
-        <div style="font-weight:700">GitHubn</div>
-        <div style="font-size:13px;color:var(--muted)">Developer portfolio</div>
-      </div>
-    </div>
-    <nav aria-label="Main">
+<section class="hero bg-gradient-to-br from-[#4EE1FF]/20 to-[#8A4CFF]/12">
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <a class="logo" aria-label="site">[SVG]</a>
+    <nav class="flex gap-4">
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a href="#" title="View source">Source</a>
+      <a href="#about">About</a>
+      <a class="btn-primary" href="https://github.com/USERNAME">Star</a>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <h1 id="hero-title">Building thoughtful, maintainable web apps — fast.</h1>
-        <p>Full-stack developer focused on accessible, high-performance interfaces and robust backends. Open to collaborations and freelance work.</p>
-        <div class="cta">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn" href="#" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Download resume</a>
-        </div>
+  <div class="max-w-6xl mx-auto p-6 grid lg:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-5xl font-semibold">Projects by USERNAME</h1>
+      <p class="mt-4 text-lg">Open-source explorer — curated repos & demos.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/USERNAME" class="btn-outline">GitHub</a>
       </div>
-      <aside style="background:var(--card);padding:18px;border-radius:12px">
-        <div style="font-weight:700">Contact</div>
-        <div style="color:var(--muted);margin-top:8px">you@domain.com</div>
-        <div style="margin-top:12px">
-          <a class="chip" href="#" style="display:inline-block">GitHub</a>
-          <a class="chip" href="#" style="display:inline-block">LinkedIn</a>
-        </div>
-      </aside>
-    </section>
-
-    <section id="projects">
-      <h2 style="margin:0 0 14px 0">Featured Projects</h2>
-      <div class="grid" id="project-grid">
-        <!-- Project cards injected via JS or template -->
-        <article class="card" role="article">
-          <h3 style="margin:0 0 6px 0">Project One</h3>
-          <p style="margin:0;color:var(--muted)">Short description of the project that highlights purpose and tech.</p>
-          <div class="chips" aria-hidden="true">
-            <span class="chip">React</span><span class="chip">Node</span><span class="chip">Postgres</span>
-          </div>
-          <div style="margin-top:12px;display:flex;gap:8px">
-            <a class="btn" href="#" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Live</a>
-            <a class="btn" href="#">Repo</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" style="margin-top:36px">
-      <h2>Skills</h2>
-      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="card"><strong>Frontend</strong><div style="color:var(--muted);margin-top:8px">React · Vue · TypeScript · CSS</div></div>
-        <div class="card"><strong>Backend</strong><div style="color:var(--muted);margin-top:8px">Node · Go · PostgreSQL · GraphQL</div></div>
-        <div class="card"><strong>Tools</strong><div style="color:var(--muted);margin-top:8px">Docker · CI/CD · Testing</div></div>
-      </div>
-    </section>
-
-    <section id="contact" style="margin-top:36px">
-      <h2>Contact</h2>
-      <form action="#" style="display:grid;gap:8px;max-width:640px">
-        <input name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
-        <input name="email" placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
-        <textarea name="message" rows="4" placeholder="Message" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
-        <button class="btn" type="submit">Send message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>© <span id="year"></span> GitHubn — Built with ❤️</div>
-      <div style="color:var(--muted)">License: MIT</div>
     </div>
-  </footer>
-</div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  // TODO: replace with fetch to your repo's data file to populate projects dynamically.
-</script>
-</body>
-</html>
+    <div class="repo-carousel">
+      <!-- JS populates small card previews -->
+      <article class="repo-card rounded-xl p-4 glass">
+        <h3 class="font-medium">repo-name</h3>
+        <p class="text-sm opacity-80">Short description…</p>
+        <div class="mt-3 flex items-center gap-3 text-xs">
+          <span class="lang-dot" style="background:#F1E05A"></span><span>JavaScript</span>
+          <span>★ 1.2k</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
